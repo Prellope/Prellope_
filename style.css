@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px 15px 50px;
+  background: #fff3fb;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #8c5ca8;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 55px;
+  color: #df8fbd;
+  font-weight: 700;
+}
+
+header h2 {
+  margin: -8px 0 0;
+  font-size: 35px;
+  color: #a77bd0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #ffffff;
+  border: 3px solid #edb6d9;
+  border-radius: 25px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(180, 120, 180, 0.08);
+}
+
+.card h3 {
+  text-align: center;
+  margin: 0 0 15px;
+  padding-bottom: 12px;
+
+  border-bottom: 2px solid #f0d8eb;
+
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #c45d9b;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 18px 0 8px;
+
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #8c55b5;
+}
+
+.category::before,
+.category::after {
+  content: "";
+  height: 1px;
+  background: #dec7e9;
+  flex: 1;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 6px 0;
+  padding: 7px 10px;
+
+  background: #fbf0fb;
+  border-radius: 12px;
+
+  font-size: 15px;
+}
+
+.item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item b {
+  color: #c45d9b;
+  white-space: nowrap;
+}
+
+/* ORDER VIA */
+
+.contact {
+  max-width: 1050px;
+  margin: 30px auto 0;
+  padding: 20px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 3px solid #edb6d9;
+  border-radius: 25px;
+}
+
+.contact h3 {
+  color: #c45d9b;
+  letter-spacing: 2px;
+}
+
+.contact a {
+  display: inline-block;
+
+  margin: 5px;
+  padding: 11px 22px;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.wa {
+  background: #e58ab8;
+}
+
+.telegram {
+  background: #9b7bd0;
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px 8px 30px;
+  }
+
+  header h1 {
+    font-size: 42px;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .category {
+    font-size: 13px;
+  }
+
+  .item {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
