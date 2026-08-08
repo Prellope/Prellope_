@@ -181,3 +181,156 @@ section h3 {
         font-size: 9px;
     }
 }
+
+/* =========================
+   HALAMAN UTAMA
+========================= */
+
+.home-header {
+  text-align: center;
+  padding: 55px 20px 25px;
+}
+
+.home-header h1 {
+  margin: 0;
+  font-family: "Brush Script MT", cursive;
+  font-size: 70px;
+  color: #df91bd;
+  font-weight: bold;
+}
+
+.home-header h2 {
+  margin: -5px 0 10px;
+  font-size: 42px;
+  color: #9f7bd1;
+  letter-spacing: 2px;
+}
+
+.decor {
+  color: #b99ada;
+  font-size: 22px;
+  letter-spacing: 8px;
+}
+
+
+/* MENU */
+
+.menu-container {
+  width: 90%;
+  max-width: 760px;
+  margin: 35px auto;
+  padding: 45px;
+  background: white;
+  border: 2px solid #f2afd2;
+  border-radius: 35px;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 20px;
+  margin-bottom: 18px;
+
+  border-radius: 50px;
+
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 3px;
+
+  color: #553766;
+
+  transition: 0.2s;
+}
+
+.menu:last-child {
+  margin-bottom: 0;
+}
+
+.menu.pink {
+  background: #fae5f2;
+}
+
+.menu.purple {
+  background: #eadcfb;
+}
+
+.menu:hover {
+  transform: scale(1.02);
+}
+
+
+/* CONTACT */
+
+footer {
+  text-align: center;
+  padding: 20px 20px 60px;
+}
+
+.contact {
+  display: inline-block;
+
+  padding: 17px 45px;
+  margin: 5px 8px;
+
+  border-radius: 50px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wa {
+  background: #20ce6b;
+}
+
+.telegram {
+  background: #239ed2;
+}
+
+
+/* BACKGROUND */
+
+body {
+  background: #fff0fa;
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+  .home-header {
+    padding-top: 45px;
+  }
+
+  .home-header h1 {
+    font-size: 58px;
+  }
+
+  .home-header h2 {
+    font-size: 36px;
+  }
+
+  .menu-container {
+    width: 90%;
+    padding: 28px 20px;
+    border-radius: 30px;
+  }
+
+  .menu {
+    font-size: 19px;
+    padding: 18px;
+  }
+
+  .contact {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+}
