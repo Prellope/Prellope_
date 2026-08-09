@@ -661,33 +661,13 @@ footer a:hover {
     transform: translateY(-3px) scale(1.01);
 }
 
-/* =============
-   TOMBOL SOSMED
-================== */
-
-.menu.blue,
-.menu.sosmed,
-.menu.games {
-    background: linear-gradient(
-        90deg,
-        #dff7ff,
-        #bdefff
-    );
-
-    border: 2px solid #8fd8ef;
-
-    color: #5d7480;
+.sosmed-button {
+    background: linear-gradient(90deg, #ffc1d9, #aee8ff);
+    color: #6b4b6f;
+    border: 2px solid #f39bc4;
 }
 
-.menu.blue:hover,
-.menu.sosmed:hover,
-.menu.games:hover {
-    background: linear-gradient(
-        90deg,
-        #c9f1fc,
-        #aee8f8
-    );
-
-    transform: translateY(-3px) scale(1.01);
+.sosmed-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(240, 150, 195, 0.25);
 }
-
