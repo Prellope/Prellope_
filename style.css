@@ -748,3 +748,275 @@ body.price-page {
         font-size: 19px;
     }
 }
+
+/* =========================================
+   ✿ PRICE LIST CUTE PINK + SKY BLUE ✿
+========================================= */
+
+body.price-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #765879;
+
+    background:
+        radial-gradient(circle at 8% 18%, #f7b9d7 0 4px, transparent 5px),
+        radial-gradient(circle at 92% 25%, #9edff5 0 5px, transparent 6px),
+        radial-gradient(circle at 15% 78%, #9edff5 0 4px, transparent 5px),
+        radial-gradient(circle at 88% 82%, #f6b5d5 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff5fa 0%, #f8f1ff 48%, #eefaff 100%);
+}
+
+/* HEADER */
+
+.price-page header {
+    text-align: center;
+    padding: 55px 20px 35px;
+    position: relative;
+}
+
+.price-page header::before {
+    content: "♡  ✦  ♡";
+    display: block;
+    color: #eaa4c9;
+    font-size: 18px;
+    letter-spacing: 8px;
+    margin-bottom: 8px;
+}
+
+.price-page header h1 {
+    margin: 0;
+
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(48px, 7vw, 72px);
+
+    color: #e69ac1;
+
+    text-shadow:
+        2px 3px 0 #f9d9e9,
+        0 8px 20px rgba(220, 140, 180, .15);
+}
+
+.price-page header h2 {
+    margin: 2px 0 0;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    color: #78c5e4;
+}
+
+.price-page header h2::before {
+    content: "♡ ";
+}
+
+.price-page header h2::after {
+    content: " ♡";
+}
+
+
+/* CONTAINER */
+
+.price-page .container {
+    width: min(1100px, 90%);
+    margin: 0 auto 70px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.price-page .card {
+    position: relative;
+
+    background: rgba(255,255,255,.92);
+
+    border: 2px solid #f2acd0;
+    border-radius: 30px;
+
+    padding: 28px 25px;
+
+    box-shadow:
+        0 12px 35px rgba(218, 157, 196, .14);
+
+    overflow: hidden;
+}
+
+/* bubble dekorasi */
+
+.price-page .card::before {
+    content: "♡";
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    font-size: 25px;
+    color: #f3b4d3;
+}
+
+.price-page .card::after {
+    content: "✦";
+    position: absolute;
+
+    bottom: 12px;
+    left: 18px;
+
+    font-size: 18px;
+    color: #a7def3;
+}
+
+
+/* CARD BIRU SELANG-SELING */
+
+.price-page .card:nth-child(even) {
+    border-color: #91d7f1;
+}
+
+.price-page .card:nth-child(even)::before {
+    color: #9bdcf3;
+}
+
+.price-page .card:nth-child(even)::after {
+    color: #f3b4d3;
+}
+
+
+/* NAMA APLIKASI */
+
+.price-page .card h3 {
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-size: 23px;
+    letter-spacing: 4px;
+
+    color: #df82b4;
+
+    padding-bottom: 13px;
+
+    border-bottom: 2px dashed #f0bad5;
+}
+
+.price-page .card:nth-child(even) h3 {
+    color: #62b6d9;
+    border-color: #a9def1;
+}
+
+
+/* CATEGORY */
+
+.price-page .category {
+    margin: 19px 0 11px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #946c9e;
+    letter-spacing: 1.5px;
+}
+
+.price-page .category::before {
+    content: "♡";
+    color: #ee9fc6;
+    margin-right: 8px;
+}
+
+.price-page .category::after {
+    content: "♡";
+    color: #8fd4ee;
+    margin-left: 8px;
+}
+
+
+/* ITEM PRICE */
+
+.price-page .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 8px 0;
+    padding: 10px 14px;
+
+    border-radius: 15px;
+
+    background: #fff0f8;
+
+    font-size: 14px;
+
+    transition: .2s ease;
+}
+
+.price-page .item:hover {
+    transform: translateX(3px);
+}
+
+.price-page .item:nth-child(even) {
+    background: #edfaff;
+}
+
+.price-page .item span {
+    color: #806180;
+}
+
+.price-page .item b {
+    color: #db76aa;
+}
+
+.price-page .item:nth-child(even) b {
+    color: #55acce;
+}
+
+
+/* GARIS PEMISAH */
+
+.price-page hr {
+    border: none;
+    border-top: 1px dashed #efb3d1;
+    margin: 18px 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .price-page header {
+        padding: 38px 15px 25px;
+    }
+
+    .price-page header h1 {
+        font-size: 48px;
+    }
+
+    .price-page header h2 {
+        font-size: 21px;
+    }
+
+    .price-page .container {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .price-page .card {
+        padding: 23px 18px;
+        border-radius: 25px;
+    }
+
+    .price-page .card h3 {
+        font-size: 20px;
+    }
+
+    .price-page .item {
+        font-size: 13px;
+    }
+}
