@@ -1020,3 +1020,54 @@ body.price-page {
         font-size: 13px;
     }
 }
+
+/* ===== TOMBOL KEMBALI ===== */
+.back-button {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 11px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e8,
+        #d9f2ff
+    );
+
+    color: #8b6f9f;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    border: 2px solid #f3b7d2;
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 15px rgba(232, 160, 195, 0.18);
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(
+        135deg,
+        #ffc5df,
+        #c9edff
+    );
+
+    box-shadow:
+        0 8px 20px rgba(232, 160, 195, 0.25);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
