@@ -1,1293 +1,673 @@
-/* =========================
-   PRELLOPE PASTEL THEME
-   PINK + BABY BLUE
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Pacifico&display=swap');
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-
-    font-family: "Baloo 2", sans-serif;
+    margin: 0;
+    padding: 25px 15px 60px;
 
     background:
-        radial-gradient(circle at 10% 10%, #ffd9e8 0, transparent 22%),
-        radial-gradient(circle at 90% 15%, #d8f2ff 0, transparent 24%),
-        linear-gradient(135deg, #fff5fa, #f4fbff);
+        radial-gradient(circle at 8% 10%, #ffd6e8 0 5px, transparent 6px),
+        radial-gradient(circle at 92% 15%, #bdefff 0 5px, transparent 6px),
+        radial-gradient(circle at 15% 90%, #bdefff 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff5fa, #effbff);
 
-    color: #68486d;
-
-    overflow-x: hidden;
+    color: #6b7280;
+    font-family: "Baloo 2", sans-serif;
 }
 
-
-/* =========================
-   DECORATION
-========================= */
-
-.decor {
-    position: fixed;
-    z-index: 0;
-
-    pointer-events: none;
-
-    font-size: 25px;
-    opacity: 0.65;
-
-    animation: float 4s ease-in-out infinite;
-}
-
-.decor-1 {
-    top: 120px;
-    left: 5%;
-    color: #f39bc4;
-}
-
-.decor-2 {
-    top: 220px;
-    right: 7%;
-    color: #86cfee;
-    animation-delay: 1s;
-}
-
-.decor-3 {
-    top: 55%;
-    left: 3%;
-    color: #f4a8c9;
-    animation-delay: 2s;
-}
-
-.decor-4 {
-    top: 70%;
-    right: 5%;
-    color: #8fd5f2;
-    animation-delay: 1.5s;
-}
-
-.decor-5 {
-    top: 85%;
-    left: 8%;
-    font-size: 20px;
-    animation-delay: 2.5s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.back-button {
-    position: absolute;
-
-    top: 25px;
-    right: 30px;
-
-    z-index: 10;
-
-    text-decoration: none;
-
-    padding: 10px 22px;
-
-    border-radius: 30px;
-
-    background: rgba(255, 255, 255, 0.75);
-
-    border: 2px solid #f5b2d1;
-
-    color: #a7658e;
-
-    font-size: 17px;
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-.back-button:hover {
-    transform: translateY(-3px);
-
-    background: #ffdceb;
-
-    box-shadow:
-        0 8px 20px rgba(237, 145, 188, 0.2);
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.hero {
-    position: relative;
-    z-index: 1;
-
-    text-align: center;
-
-    padding: 80px 20px 35px;
-}
-
-.mini-badge {
-    display: inline-block;
-
-    padding: 7px 20px;
-
-    margin-bottom: 15px;
-
-    border-radius: 30px;
-
-    background: rgba(255, 255, 255, 0.7);
-
-    border: 1.5px solid #b9e6f8;
-
-    color: #76aeca;
-
-    font-size: 15px;
-}
-
-.hero h1 {
-    font-family: "Pacifico", cursive;
-
-    font-size: clamp(60px, 9vw, 105px);
-
-    line-height: 1;
-
-    letter-spacing: 1px;
-
-    text-shadow:
-        3px 4px 0 rgba(255,255,255,0.8);
-}
-
-.hero h1 span:first-child {
-    color: #ed93bd;
-}
-
-.hero h1 span:last-child {
-    color: #83c7e9;
-}
-
-.subtitle {
-    margin-top: 15px;
-
-    font-size: 25px;
-    font-weight: 700;
-
-    color: #7e9fc0;
-
-    letter-spacing: 2px;
-}
-
-.cute-line {
-    margin-top: 10px;
-
-    color: #e99bc1;
-
-    font-size: 18px;
-
-    letter-spacing: 8px;
-}
-
-
-/* =========================
-   MENU CONTAINER
-========================= */
-
-.menu-container {
-    position: relative;
-    z-index: 1;
-
-    width: min(1100px, 92%);
-
-    margin: 15px auto 45px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 24px;
-}
-
-
-/* =========================
-   CARD
-========================= */
-
-.menu-card {
-    position: relative;
-
-    text-decoration: none;
-
-    text-align: center;
-
-    min-height: 320px;
-
-    padding: 32px 22px;
-
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.82);
-
-    border: 2px solid;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.menu-card::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 9px;
-
-    border: 1.5px dashed;
-
-    border-radius: 23px;
-
-    pointer-events: none;
-}
-
-.pink-card {
-    border-color: #f5b0d0;
-}
-
-.pink-card::before {
-    border-color: #f7c9df;
-}
-
-.blue-card {
-    border-color: #9bdcf5;
-}
-
-.blue-card::before {
-    border-color: #c1eafa;
-}
-
-.menu-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 15px 35px rgba(177, 143, 175, 0.18);
-}
-
-
-/* =========================
-   CARD ICON
-========================= */
-
-.card-icon {
-    width: 75px;
-    height: 75px;
-
-    margin: 0 auto 18px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    font-size: 34px;
-
-    background: #fff;
-
-    box-shadow:
-        0 5px 15px rgba(180,150,180,0.12);
-}
-
-.pink-card .card-icon {
-    background: #ffe4ef;
-}
-
-.blue-card .card-icon {
-    background: #def4ff;
-}
-
-
-/* =========================
-   CARD TEXT
-========================= */
-
-.menu-card h2 {
-    position: relative;
-
-    font-size: 25px;
-
-    margin-bottom: 10px;
-
-    letter-spacing: 1px;
-}
-
-.pink-card h2 {
-    color: #df79ad;
-}
-
-.blue-card h2 {
-    color: #62a9d1;
-}
-
-.small-line {
-    width: 65%;
-
-    height: 1px;
-
-    margin: 12px auto 18px;
-
-    border-top: 2px dashed #e7b8cf;
-}
-
-.blue-card .small-line {
-    border-color: #acdcef;
-}
-
-.menu-card p {
-    font-size: 17px;
-
-    line-height: 1.5;
-
-    color: #765d78;
-
-    min-height: 55px;
-}
-
-
-/* =========================
-   SEE BUTTON
-========================= */
-
-.see-button {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 10px 24px;
-
-    border-radius: 25px;
-
-    color: white;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-.pink-card .see-button {
-    background: linear-gradient(
-        135deg,
-        #f49ac1,
-        #f7b5d2
-    );
-}
-
-.blue-card .see-button {
-    background: linear-gradient(
-        135deg,
-        #82c9e9,
-        #a9ddf3
-    );
-}
-
-.menu-card:hover .see-button {
-    transform: scale(1.05);
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box {
-    position: relative;
-    z-index: 1;
-
-    width: min(800px, 90%);
-
-    margin: 0 auto 50px;
-
-    padding: 28px;
-
-    text-align: center;
-
-    background: rgba(255,255,255,0.78);
-
-    border-radius: 30px;
-
-    border: 2px solid #f3b5d3;
-
-    box-shadow:
-        0 10px 30px rgba(180,140,180,0.08);
-}
-
-.contact-box h2 {
-    color: #e488b5;
-
-    margin-bottom: 20px;
-
-    font-size: 25px;
-}
-
-.contact-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.contact {
-    text-decoration: none;
-
-    padding: 11px 30px;
-
-    border-radius: 30px;
-
-    color: white;
-
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-.whatsapp {
-    background: #91dcb3;
-}
-
-.telegram {
-    background: #87c9e8;
-}
-
-.contact:hover {
-    transform: translateY(-3px);
-}
-
-.footer-text {
-    margin-top: 18px;
-
-    color: #9d829e;
-
-    font-size: 14px;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 850px) {
-
-    .menu-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================
-   HP
-========================= */
-
-@media (max-width: 600px) {
-
-    .back-button {
-        top: 18px;
-        right: 18px;
-
-        padding: 7px 16px;
-
-        font-size: 14px;
-    }
-
-    .hero {
-        padding-top: 85px;
-    }
-
-    .mini-badge {
-        font-size: 13px;
-    }
-
-    .hero h1 {
-        font-size: 62px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
-    .menu-container {
-        grid-template-columns: 1fr;
-
-        width: 90%;
-
-        gap: 18px;
-    }
-
-    .menu-card {
-        min-height: 290px;
-    }
-
-    .contact-box {
-        width: 90%;
-    }
-
-}
 
 /* =================================
-   PRICE LIST - SOFT PINK BLUE THEME
-   ================================= */
+   HEADER
+================================= */
 
-body.price-page {
-    margin: 0;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    color: #806080;
-
-    background:
-        radial-gradient(circle at 10% 15%, #ffd9e9 0 5px, transparent 6px),
-        radial-gradient(circle at 90% 20%, #c9efff 0 5px, transparent 6px),
-        radial-gradient(circle at 15% 80%, #c9efff 0 4px, transparent 5px),
-        linear-gradient(135deg, #fff4fa, #eefaff);
-}
-
-/* HEADER */
-
-.price-page header {
+header {
     text-align: center;
-    padding: 55px 20px 30px;
+    margin-bottom: 35px;
+    position: relative;
 }
 
-.price-page header h1 {
+header h1,
+.home-header h1 {
     margin: 0;
-    font-family: 'Pacifico', cursive;
-    font-size: 58px;
-    color: #e99bc3;
-    text-shadow: 2px 3px 0 #f9d8e9;
+
+    font-family: "Pacifico", cursive;
+    font-size: clamp(52px, 8vw, 80px);
+    font-weight: 400;
+
+    color: #ed8fba;
+
+    text-shadow:
+        3px 4px 0 #ffd8e8;
 }
 
-.price-page header h1::before {
-    content: "♡ ";
-}
+header h2,
+.home-header h2 {
+    display: inline-block;
 
-.price-page header h1::after {
-    content: " ♡";
-}
-
-.price-page header h2 {
     margin: 5px 0 0;
-    font-size: 25px;
-    color: #7ebfe0;
+    padding: 3px 28px 6px;
+
+    font-size: clamp(25px, 4vw, 38px);
+    font-weight: 700;
+
     letter-spacing: 3px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #f39ac2,
+        #73cfee
+    );
+
+    border-radius: 40px;
+
+    box-shadow:
+        0 6px 15px rgba(105, 200, 230, .20);
 }
 
-/* CONTAINER */
+.decor {
+    margin-top: 12px;
 
-.price-page .container {
-    width: min(1100px, 90%);
-    margin: 0 auto 60px;
+    color: #72c9e8;
+
+    font-size: 22px;
+
+    letter-spacing: 9px;
+}
+
+
+/* =================================
+   BACK BUTTON
+================================= */
+
+.back {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 18px;
+
+    border-radius: 30px;
+
+    background: #e5f8ff;
+
+    border: 2px solid #a9e2f5;
+
+    color: #4fa9c8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.back:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   PRICELIST CONTAINER
+================================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 22px;
 }
 
-/* CARD */
 
-.price-page .card {
-    background: rgba(255,255,255,0.88);
-    border: 2px solid #f4add0;
+/* =================================
+   CARD
+================================= */
+
+.card,
+section {
+    position: relative;
+
+    background: rgba(255, 255, 255, .95);
+
+    border: 3px solid #f4b3d0;
+
     border-radius: 28px;
 
-    padding: 25px;
+    padding: 22px 20px;
 
     box-shadow:
-        0 10px 30px rgba(218, 153, 194, 0.12),
-        inset 0 0 0 1px rgba(255,255,255,0.8);
+        0 10px 25px rgba(235, 140, 180, .12);
 
-    transition: 0.25s ease;
+    overflow: hidden;
+
+    transition: .25s ease;
 }
 
-.price-page .card:nth-child(even) {
-    border-color: #9ddcf4;
+.card:nth-child(even),
+section:nth-child(even) {
+    border-color: #a9e3f5;
+
+    box-shadow:
+        0 10px 25px rgba(90, 190, 225, .12);
 }
 
-.price-page .card:hover {
+.card:hover,
+section:hover {
     transform: translateY(-4px);
 }
 
-/* NAMA APLIKASI */
 
-.price-page .card h3 {
-    margin: 0 0 18px;
-    padding-bottom: 12px;
+/* =================================
+   CARD DECORATION
+================================= */
 
-    text-align: center;
-
-    font-size: 22px;
-    letter-spacing: 3px;
-
-    color: #e286b5;
-
-    border-bottom: 2px dashed #f2b9d5;
-}
-
-.price-page .card:nth-child(even) h3 {
-    color: #65b4da;
-    border-color: #a8ddf1;
-}
-
-/* CATEGORY */
-
-.price-page .category {
-    margin: 18px 0 10px;
-
-    text-align: center;
-
-    font-weight: 600;
-    color: #9b6da5;
-    letter-spacing: 1px;
-
-    position: relative;
-}
-
-.price-page .category::before,
-.price-page .category::after {
+.card::before,
+section::before {
     content: "♡";
-    color: #ef9fc5;
-    margin: 0 8px;
-}
 
-/* ITEM */
-
-.price-page .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin: 7px 0;
-    padding: 9px 13px;
-
-    border-radius: 14px;
-
-    background: #fff0f8;
-
-    color: #806080;
-    font-size: 14px;
-}
-
-.price-page .item:nth-child(even) {
-    background: #edfaff;
-}
-
-.price-page .item b {
-    color: #dc76aa;
-}
-
-.price-page .item:nth-child(even) b {
-    color: #55aace;
-}
-
-/* TAMBAHAN DEKORASI */
-
-.price-page .container::before {
-    content: "♡  ✦  ♡";
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
 
-    color: #e7a5cb;
-    font-size: 18px;
+    top: 7px;
+    left: 13px;
+
+    color: #f19ac0;
+
+    font-size: 21px;
 }
 
-/* HP */
+.card::after,
+section::after {
+    content: "✦";
 
-@media (max-width: 700px) {
+    position: absolute;
 
-    .price-page header {
-        padding-top: 35px;
-    }
+    top: 8px;
+    right: 14px;
 
-    .price-page header h1 {
-        font-size: 45px;
-    }
+    color: #73cce9;
 
-    .price-page header h2 {
-        font-size: 21px;
-    }
-
-    .price-page .container {
-        width: 90%;
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .price-page .card {
-        padding: 18px;
-        border-radius: 24px;
-    }
-
-    .price-page .card h3 {
-        font-size: 19px;
-    }
+    font-size: 20px;
 }
 
-/* =========================================
-   ✿ PRICE LIST CUTE PINK + SKY BLUE ✿
-========================================= */
 
-body.price-page {
-    margin: 0;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    color: #765879;
+/* =================================
+   NAMA APLIKASI
+================================= */
+
+.card h3,
+section h3 {
+    display: table;
+
+    margin: 0 auto 20px;
+
+    padding: 6px 27px 7px;
+
+    border-radius: 30px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: white;
 
     background:
-        radial-gradient(circle at 8% 18%, #f7b9d7 0 4px, transparent 5px),
-        radial-gradient(circle at 92% 25%, #9edff5 0 5px, transparent 6px),
-        radial-gradient(circle at 15% 78%, #9edff5 0 4px, transparent 5px),
-        radial-gradient(circle at 88% 82%, #f6b5d5 0 4px, transparent 5px),
-        linear-gradient(135deg, #fff5fa 0%, #f8f1ff 48%, #eefaff 100%);
-}
-
-/* HEADER */
-
-.price-page header {
-    text-align: center;
-    padding: 55px 20px 35px;
-    position: relative;
-}
-
-.price-page header::before {
-    content: "♡  ✦  ♡";
-    display: block;
-    color: #eaa4c9;
-    font-size: 18px;
-    letter-spacing: 8px;
-    margin-bottom: 8px;
-}
-
-.price-page header h1 {
-    margin: 0;
-
-    font-family: 'Pacifico', cursive;
-    font-size: clamp(48px, 7vw, 72px);
-
-    color: #e69ac1;
-
-    text-shadow:
-        2px 3px 0 #f9d9e9,
-        0 8px 20px rgba(220, 140, 180, .15);
-}
-
-.price-page header h2 {
-    margin: 2px 0 0;
-
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 4px;
-
-    color: #78c5e4;
-}
-
-.price-page header h2::before {
-    content: "♡ ";
-}
-
-.price-page header h2::after {
-    content: " ♡";
-}
-
-
-/* CONTAINER */
-
-.price-page .container {
-    width: min(1100px, 90%);
-    margin: 0 auto 70px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-
-/* CARD */
-
-.price-page .card {
-    position: relative;
-
-    background: rgba(255,255,255,.92);
-
-    border: 2px solid #f2acd0;
-    border-radius: 30px;
-
-    padding: 28px 25px;
+        linear-gradient(
+            135deg,
+            #f08db9,
+            #e879ad
+        );
 
     box-shadow:
-        0 12px 35px rgba(218, 157, 196, .14);
-
-    overflow: hidden;
+        0 5px 12px rgba(230, 115, 170, .20);
 }
 
-/* bubble dekorasi */
+.card:nth-child(even) h3,
+section:nth-child(even) h3 {
+    background:
+        linear-gradient(
+            135deg,
+            #79d0ed,
+            #54bada
+        );
 
-.price-page .card::before {
-    content: "♡";
-    position: absolute;
-
-    top: 12px;
-    right: 18px;
-
-    font-size: 25px;
-    color: #f3b4d3;
-}
-
-.price-page .card::after {
-    content: "✦";
-    position: absolute;
-
-    bottom: 12px;
-    left: 18px;
-
-    font-size: 18px;
-    color: #a7def3;
+    box-shadow:
+        0 5px 12px rgba(70, 180, 220, .20);
 }
 
 
-/* CARD BIRU SELANG-SELING */
+/* =================================
+   CATEGORY
+================================= */
 
-.price-page .card:nth-child(even) {
-    border-color: #91d7f1;
-}
-
-.price-page .card:nth-child(even)::before {
-    color: #9bdcf3;
-}
-
-.price-page .card:nth-child(even)::after {
-    color: #f3b4d3;
-}
-
-
-/* NAMA APLIKASI */
-
-.price-page .card h3 {
-    margin: 0 0 20px;
-
-    text-align: center;
-
-    font-size: 23px;
-    letter-spacing: 4px;
-
-    color: #df82b4;
-
-    padding-bottom: 13px;
-
-    border-bottom: 2px dashed #f0bad5;
-}
-
-.price-page .card:nth-child(even) h3 {
-    color: #62b6d9;
-    border-color: #a9def1;
-}
-
-
-/* CATEGORY */
-
-.price-page .category {
-    margin: 19px 0 11px;
-
-    text-align: center;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    color: #946c9e;
-    letter-spacing: 1.5px;
-}
-
-.price-page .category::before {
-    content: "♡";
-    color: #ee9fc6;
-    margin-right: 8px;
-}
-
-.price-page .category::after {
-    content: "♡";
-    color: #8fd4ee;
-    margin-left: 8px;
-}
-
-
-/* ITEM PRICE */
-
-.price-page .item {
+.category {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    margin: 8px 0;
-    padding: 10px 14px;
-
-    border-radius: 15px;
-
-    background: #fff0f8;
-
-    font-size: 14px;
-
-    transition: .2s ease;
-}
-
-.price-page .item:hover {
-    transform: translateX(3px);
-}
-
-.price-page .item:nth-child(even) {
-    background: #edfaff;
-}
-
-.price-page .item span {
-    color: #806180;
-}
-
-.price-page .item b {
-    color: #db76aa;
-}
-
-.price-page .item:nth-child(even) b {
-    color: #55acce;
-}
-
-
-/* GARIS PEMISAH */
-
-.price-page hr {
-    border: none;
-    border-top: 1px dashed #efb3d1;
-    margin: 18px 0;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .price-page header {
-        padding: 38px 15px 25px;
-    }
-
-    .price-page header h1 {
-        font-size: 48px;
-    }
-
-    .price-page header h2 {
-        font-size: 21px;
-    }
-
-    .price-page .container {
-        width: 92%;
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .price-page .card {
-        padding: 23px 18px;
-        border-radius: 25px;
-    }
-
-    .price-page .card h3 {
-        font-size: 20px;
-    }
-
-    .price-page .item {
-        font-size: 13px;
-    }
-}
-
-/* ===== TOMBOL KEMBALI ===== */
-.back-button {
-    position: fixed;
-    top: 25px;
-    left: 25px;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-
-    padding: 11px 20px;
-
-    background: linear-gradient(
-        135deg,
-        #ffd6e8,
-        #d9f2ff
-    );
-
-    color: #8b6f9f;
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    border: 2px solid #f3b7d2;
-    border-radius: 30px;
-
-    box-shadow:
-        0 5px 15px rgba(232, 160, 195, 0.18);
-
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.back-button:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(
-        135deg,
-        #ffc5df,
-        #c9edff
-    );
-
-    box-shadow:
-        0 8px 20px rgba(232, 160, 195, 0.25);
-}
-
-.back-button:active {
-    transform: scale(0.95);
-}
-
-/* =========================================
-   🌸 TEMA PINK SOFT + SKY BLUE
-   ========================================= */
-
-:root {
-    --pink: #f3a8c8;
-    --pink-soft: #ffe1ed;
-    --pink-light: #fff2f8;
-
-    --blue: #9bdcf5;
-    --blue-soft: #e1f6ff;
-    --blue-light: #f2fbff;
-
-    --text: #725477;
-}
-
-
-/* =========================================
-   🎀 TOMBOL KEMBALI - SEMUA HALAMAN
-   ========================================= */
-
-.back-button,
-.back-btn,
-a.back-button,
-a.back-btn {
-    display: inline-flex !important;
     align-items: center;
     justify-content: center;
 
-    padding: 10px 18px !important;
+    gap: 10px;
 
-    background: linear-gradient(
-        135deg,
-        var(--pink-soft),
-        var(--blue-soft)
-    ) !important;
+    margin: 19px 0 10px;
 
-    color: var(--text) !important;
+    font-size: 15px;
 
-    border: 2px solid var(--pink) !important;
-    border-radius: 30px !important;
-
-    text-decoration: none !important;
     font-weight: 700;
 
-    box-shadow: 0 5px 15px rgba(230, 160, 195, 0.18);
+    letter-spacing: 1px;
 
-    transition: 0.3s ease;
+    color: #e078aa;
 }
 
-.back-button:hover,
-.back-btn:hover {
+.category::before,
+.category::after {
+    content: "";
+
+    flex: 1;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #f5c7dc;
+}
+
+.card:nth-child(even) .category,
+section:nth-child(even) .category {
+    color: #4faecb;
+}
+
+.card:nth-child(even) .category::before,
+.card:nth-child(even) .category::after,
+section:nth-child(even) .category::before,
+section:nth-child(even) .category::after {
+    background: #b9e8f6;
+}
+
+
+/* =================================
+   PRICE ITEM
+================================= */
+
+.item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin: 7px 0;
+
+    padding: 8px 12px;
+
+    background: #fff0f7;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.card:nth-child(even) .item,
+section:nth-child(even) .item {
+    background: #edfaff;
+}
+
+.item:hover {
     transform: translateY(-2px);
+}
+
+.item span {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #7b7f88;
+}
+
+.item b {
+    white-space: nowrap;
+
+    color: #df669e;
+
+    font-weight: 700;
+}
+
+.card:nth-child(even) .item b,
+section:nth-child(even) .item b {
+    color: #43a8c9;
+}
+
+
+/* =================================
+   HOME MENU
+================================= */
+
+.menu-container {
+    width: 90%;
+
+    max-width: 760px;
+
+    margin: 35px auto;
+
+    padding: 40px;
+
+    background: rgba(255,255,255,.92);
+
+    border: 3px solid #f2b5d2;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 12px 30px rgba(230, 130, 180, .12);
+}
+
+.menu {
+    display: block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 19px;
+
+    margin-bottom: 17px;
+
+    border-radius: 50px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #6f6470;
+
+    transition: .25s ease;
+}
+
+.menu:last-child {
+    margin-bottom: 0;
+}
+
+
+/* PINK MENU */
+
+.menu.pink {
     background: linear-gradient(
-        135deg,
-        #ffcde2,
-        #ccefff
-    ) !important;
+        90deg,
+        #ffe1ee,
+        #ffd3e5
+    );
+
+    border: 2px solid #f4b0cf;
 }
 
 
-/* =========================================
-   💗 SEMUA TOMBOL WHATSAPP
-   ========================================= */
+/* BLUE MENU */
 
-.whatsapp,
-.whatsapp-btn,
-.whatsapp-button,
-a[href*="wa.me"] {
+.menu.purple {
     background: linear-gradient(
-        135deg,
-        #f3a1c4,
-        #f7b6d3
-    ) !important;
+        90deg,
+        #dff7ff,
+        #c7effb
+    );
 
-    color: white !important;
-
-    border: 2px solid #ed91ba !important;
-    border-radius: 30px !important;
-
-    text-decoration: none !important;
-
-    box-shadow: 0 5px 15px rgba(237, 145, 186, 0.2);
-
-    transition: 0.3s ease;
+    border: 2px solid #9fdef0;
 }
 
-.whatsapp:hover,
-.whatsapp-btn:hover,
-.whatsapp-button:hover,
-a[href*="wa.me"]:hover {
+
+/* kalau ada menu dengan class editing/education/music */
+
+.menu.editing,
+.menu.music {
     background: linear-gradient(
-        135deg,
-        #ed8fb7,
-        #f3a7c8
-    ) !important;
+        90deg,
+        #dff7ff,
+        #c7effb
+    );
 
-    transform: translateY(-2px);
+    border: 2px solid #9fdef0;
+}
+
+.menu.education,
+.menu.lain {
+    background: linear-gradient(
+        90deg,
+        #ffe1ee,
+        #ffd3e5
+    );
+
+    border: 2px solid #f4b0cf;
+}
+
+.menu:hover {
+    transform: translateY(-3px) scale(1.01);
 }
 
 
-/* =========================================
-   📱 PRICE LIST - 2 KOLOM DI HP
-   ========================================= */
+/* =================================
+   CONTACT
+================================= */
 
-.container {
-    width: 92%;
-    max-width: 1100px;
-    margin: auto;
+footer {
+    text-align: center;
+
+    padding: 20px 20px 60px;
 }
 
-/* bagian kartu price list */
-.cards,
-.price-list,
-.price-container,
-.container {
-    box-sizing: border-box;
+.contact,
+footer a {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    margin: 5px 6px;
+
+    border-radius: 40px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: .2s;
+}
+
+.contact:hover,
+footer a:hover {
+    transform: translateY(-3px);
 }
 
 
-/* Kalau price list memakai grid */
-.price-list,
-.cards {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
+/* WHATSAPP */
+
+.wa {
+    background: #ef91b9 !important;
 }
 
 
-/* Kartu price list */
-.card {
-    width: 100% !important;
-    box-sizing: border-box;
+/* TELEGRAM */
+
+.telegram {
+    background: #64c5e5 !important;
 }
 
 
-/* =========================================
-   📱 HP TETAP 2 KOLOM
-   ========================================= */
+/* =================================
+   MOBILE
+================================= */
 
 @media (max-width: 600px) {
 
-    .price-list,
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 10px !important;
+    body {
+        padding: 18px 9px 40px;
     }
 
-    .card {
-        padding: 12px !important;
+    header h1,
+    .home-header h1 {
+        font-size: 50px;
     }
 
-    .card h2,
-    .card h3 {
-        font-size: 15px !important;
+    header h2,
+    .home-header h2 {
+        font-size: 26px;
+
+        padding: 3px 22px 5px;
+
+        letter-spacing: 2px;
     }
 
-    .card p,
-    .card span,
-    .card li {
-        font-size: 11px !important;
+
+    /* TETAP 2 KOLOM DI HP */
+
+    .container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
     }
 
-    .back-button,
-    .back-btn {
-        top: 15px !important;
-        left: 12px !important;
-        padding: 8px 13px !important;
-        font-size: 12px !important;
+
+    .card,
+    section {
+        padding: 16px 9px;
+
+        border-radius: 20px;
+
+        border-width: 2px;
     }
 
-    .whatsapp,
-    .whatsapp-btn,
-    .whatsapp-button {
-        padding: 9px 16px !important;
-        font-size: 12px !important;
+
+    .card h3,
+    section h3 {
+        font-size: 13px;
+
+        letter-spacing: 1px;
+
+        padding: 5px 10px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .category {
+        font-size: 9px;
+
+        gap: 4px;
+
+        margin: 12px 0 7px;
+    }
+
+
+    .item {
+        font-size: 9px;
+
+        padding: 7px 6px;
+
+        border-radius: 9px;
+
+        margin: 4px 0;
+    }
+
+
+    .item b {
+        font-size: 9px;
+    }
+
+
+    /* HOME */
+
+    .menu-container {
+        width: 92%;
+
+        padding: 25px 16px;
+
+        border-radius: 28px;
+    }
+
+    .menu {
+        font-size: 18px;
+
+        padding: 17px;
+
+        margin-bottom: 13px;
+    }
+
+
+    footer a {
+        padding: 12px 22px;
+
+        font-size: 14px;
     }
 }
 
+/* =============
+   TOMBOL TOPUP
+================== */
 
-/* =========================================
-   🏠 HALAMAN AWAL - 2 KOLOM DI HP
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .menu,
-    .menu-container,
-    .category-container,
-    .categories {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 10px !important;
-    }
-
-    .menu-card,
-    .category-card {
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-}
-
-
-/* =========================================
-   ✨ SUPAYA TIDAK ADA TOMBOL BIRU LAGI
-   ========================================= */
-
-button.whatsapp,
-button.whatsapp-btn,
-button.whatsapp-button {
+.menu.blue,
+.menu.topup,
+.menu.games {
     background: linear-gradient(
-        135deg,
-        #f3a1c4,
-        #f7b6d3
-    ) !important;
+        90deg,
+        #dff7ff,
+        #bdefff
+    );
 
-    color: white !important;
-    border-color: #ed91ba !important;
+    border: 2px solid #8fd8ef;
+
+    color: #5d7480;
+}
+
+.menu.blue:hover,
+.menu.topup:hover,
+.menu.games:hover {
+    background: linear-gradient(
+        90deg,
+        #c9f1fc,
+        #aee8f8
+    );
+
+    transform: translateY(-3px) scale(1.01);
+}
+
+.sosmed-button {
+    background: linear-gradient(90deg, #ffc1d9, #aee8ff);
+    color: #6b4b6f;
+    border: 2px solid #f39bc4;
+}
+
+.sosmed-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(240, 150, 195, 0.25);
 }
