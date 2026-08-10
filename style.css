@@ -630,3 +630,33 @@ footer a:hover {
         font-size: 14px;
     }
 }
+
+/* =========================
+   TOMBOL TOP UP / GAMES
+========================= */
+
+.menu.blue,
+.menu.topup,
+.menu.games {
+    background: linear-gradient(
+        90deg,
+        #dff7ff,
+        #bdefff
+    );
+
+    border: 2px solid #8fd8ef;
+
+    color: #5d7480;
+}
+
+.menu.blue:hover,
+.menu.topup:hover,
+.menu.games:hover {
+    background: linear-gradient(
+        90deg,
+        #c9f1fc,
+        #aee8f8
+    );
+
+    transform: translateY(-3px) scale(1.01);
+}
