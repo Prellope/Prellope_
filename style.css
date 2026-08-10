@@ -550,6 +550,201 @@ body {
 
 }
 
-<a href="https://wa.me/6289529117988" class="contact wa">
-    whatsapp
-  </a>
+/* =================================
+   PRICE LIST - SOFT PINK BLUE THEME
+   ================================= */
+
+body.price-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #806080;
+
+    background:
+        radial-gradient(circle at 10% 15%, #ffd9e9 0 5px, transparent 6px),
+        radial-gradient(circle at 90% 20%, #c9efff 0 5px, transparent 6px),
+        radial-gradient(circle at 15% 80%, #c9efff 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff4fa, #eefaff);
+}
+
+/* HEADER */
+
+.price-page header {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.price-page header h1 {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 58px;
+    color: #e99bc3;
+    text-shadow: 2px 3px 0 #f9d8e9;
+}
+
+.price-page header h1::before {
+    content: "♡ ";
+}
+
+.price-page header h1::after {
+    content: " ♡";
+}
+
+.price-page header h2 {
+    margin: 5px 0 0;
+    font-size: 25px;
+    color: #7ebfe0;
+    letter-spacing: 3px;
+}
+
+/* CONTAINER */
+
+.price-page .container {
+    width: min(1100px, 90%);
+    margin: 0 auto 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+
+.price-page .card {
+    background: rgba(255,255,255,0.88);
+    border: 2px solid #f4add0;
+    border-radius: 28px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(218, 153, 194, 0.12),
+        inset 0 0 0 1px rgba(255,255,255,0.8);
+
+    transition: 0.25s ease;
+}
+
+.price-page .card:nth-child(even) {
+    border-color: #9ddcf4;
+}
+
+.price-page .card:hover {
+    transform: translateY(-4px);
+}
+
+/* NAMA APLIKASI */
+
+.price-page .card h3 {
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 22px;
+    letter-spacing: 3px;
+
+    color: #e286b5;
+
+    border-bottom: 2px dashed #f2b9d5;
+}
+
+.price-page .card:nth-child(even) h3 {
+    color: #65b4da;
+    border-color: #a8ddf1;
+}
+
+/* CATEGORY */
+
+.price-page .category {
+    margin: 18px 0 10px;
+
+    text-align: center;
+
+    font-weight: 600;
+    color: #9b6da5;
+    letter-spacing: 1px;
+
+    position: relative;
+}
+
+.price-page .category::before,
+.price-page .category::after {
+    content: "♡";
+    color: #ef9fc5;
+    margin: 0 8px;
+}
+
+/* ITEM */
+
+.price-page .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 7px 0;
+    padding: 9px 13px;
+
+    border-radius: 14px;
+
+    background: #fff0f8;
+
+    color: #806080;
+    font-size: 14px;
+}
+
+.price-page .item:nth-child(even) {
+    background: #edfaff;
+}
+
+.price-page .item b {
+    color: #dc76aa;
+}
+
+.price-page .item:nth-child(even) b {
+    color: #55aace;
+}
+
+/* TAMBAHAN DEKORASI */
+
+.price-page .container::before {
+    content: "♡  ✦  ♡";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #e7a5cb;
+    font-size: 18px;
+}
+
+/* HP */
+
+@media (max-width: 700px) {
+
+    .price-page header {
+        padding-top: 35px;
+    }
+
+    .price-page header h1 {
+        font-size: 45px;
+    }
+
+    .price-page header h2 {
+        font-size: 21px;
+    }
+
+    .price-page .container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .price-page .card {
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .price-page .card h3 {
+        font-size: 19px;
+    }
+}
